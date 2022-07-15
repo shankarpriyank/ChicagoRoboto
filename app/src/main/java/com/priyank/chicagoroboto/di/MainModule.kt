@@ -17,11 +17,10 @@ import javax.inject.Singleton
 class MainModule {
     
     @Provides
-    @Named("Hey")
     fun provideUserID(@ApplicationContext context: Context): String {
         val preferences =
             context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        return preferences.getString("text", "")!!
+        return preferences.getString("text", "Hey Hey")!!
 
 
     }
@@ -30,8 +29,8 @@ class MainModule {
     @Singleton
     @Provides
     @Named("Hey")
-    fun provideInt() {
-
+    fun provideInt():Int {
+                  return 1
     }
 
 

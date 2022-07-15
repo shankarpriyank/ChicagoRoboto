@@ -10,8 +10,8 @@ constructor(
     private val userID: String
 ) : ViewModel() {
 
-    fun showDI(){
-
+    fun showDI(): String {
+        return userID
     }
 
 }
